@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import {Link,Route} from "react-router-dom"
 import classes from "./Tradingjournal.module.css"
+
+import Addtrade from "../Addtrade/Addtrade"
 export class Tradingjournal extends Component {
     render() {
         return (
@@ -16,8 +19,14 @@ export class Tradingjournal extends Component {
                     </ul>
                 </nav>
             </header>
-            <main>main</main>
-            <footer>footer</footer>
+            <main>
+            <div className={classes.Plus} ></div>
+               <Link className={classes.Addtrade} to="/addtrade">ADD TRADE</Link>
+                
+                </main>
+                
+                <div ><Route  path="/addtrade" component={Addtrade}></Route></div>
+               
             </div>
         )
     }
