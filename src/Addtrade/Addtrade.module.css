@@ -1,27 +1,26 @@
 .inputbox{
-    height: 400px;
-    width: 60%;
+   padding-left: 10px;
+    height: 450px;
+    width: 55%;
     position: fixed;
-    left: 150px;
-    top: 150px;
-    color:blue;
-    background-color:rgb(179, 188, 192);
-    border: 2px solid slateblue;
+    left: 100px;
+    top: 100px;
+    color:black;
+    font-weight: bolder;
+    background-color:white;
+    border: 1px solid rgb(189, 185, 209);
     border-radius: 5px;
+    
 }
-.close {
+.tradehead{
+  color: black;
+  font-weight: bolder;
+ text-align: center;
+}
+/* .close {
     position: absolute;
-    right: 32px;
-    top: 22px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.3;
-  }
-  .close:hover {
-    opacity: 1;
-    border: none;
-  }
-  .close:before, .close:after {
+    left: 48px;
+   .close:before, .close:after {
     position: absolute;
     left: 15px;
     content: ' ';
@@ -34,4 +33,140 @@
   }
   .close:after {
     transform: rotate(-45deg);
+  } top: -18px;
+    width: 5px;
+    content: ' ';
+    height: 20px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+    border: none;
+  } */
+  /*  */
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+    border: none;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 48px;
+    content: ' ';
+    height: 20px;
+    width: 5px;
+    top: -28px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  input {margin-bottom: 4px;
+    
+    font-size: medium;
+  margin-top: 4px;;
+   border-radius: 5px;
+    border: 1px solid rgb(236, 223, 223);
+    padding: 8px 10px;
+   
+    color:black;
+    letter-spacing: 1px;
+ margin-left: 15px;
+    
+  }
+  textarea{ font-size: large;
+    font-weight: normal;
+  width: 80%;
+    padding: 4px;
+    background-color: rgb(250, 239, 239) ;
+    border-radius: 5px;
+    border: 1px solid rgb(236, 223, 223);
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  select{margin-left: 6px;
+    padding: 3px;
+  }
+  button{
+    background-color:#3e98d2;
+    padding: 7px;
+    margin-left: 288px;
+    color: cornsilk;
+    margin-top: 8px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .userinputwrp {
+    position: relative;
+   
+    width: 40%;
+  
+  }
+  .userinputwrp .inputText{
+    width: 80%;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #777;
+     box-shadow: none !important;
+  }
+  .userinputwrp .inputText:focus{
+    border-color: blue;
+    border-width: medium medium 2px;
+  }
+  .userinputwrp .floatinglabel {
+    position: absolute;
+    pointer-events: none;
+    top: 28px;
+    left: 20px;
+    transition: 0.2s ease all;
+  }
+  .userinputwrp input:focus ~ .floatinglabel,
+  .userinputwrp input:not(:focus):valid ~ .floatinglabel{
+    top: 10px;
+    left: 20px;
+    font-size: 13px;
+    opacity: 1;
+  }
+  
+  .userinputwrp1 {
+    position: relative;
+    
+    width: 40%;
+  
+  }
+  .userinputwrp1 .inputText{
+    width: 80%;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #777;
+     box-shadow: none !important;
+  }
+  .userinputwrp1 .inputText:focus{
+    border-color: blue;
+    border-width: medium medium 2px;
+  }
+  .userinputwrp1 .floatinglabel1 {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 20px;
+    transition: 0.2s ease all;
+  }
+  .userinputwrp1 input:focus ~ .floatinglabel1,
+  .userinputwrp1 input:not(:focus):valid ~ .floatinglabel1{
+    top: 10px;
+    left: 20px;
+    font-size: 13px;
+    opacity: 1;
   }

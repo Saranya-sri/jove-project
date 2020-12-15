@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import {Link,Route} from "react-router-dom"
+import {Route} from "react-router-dom"
 import classes from "./Tradingjournal.module.css"
+import History from "../History/History"
 
-import Addtrade from "../Addtrade/Addtrade"
+import Dashboard from '../Dashboard/Dashboard'
 export class Tradingjournal extends Component {
     render() {
         return (
-            <div>
+            <div className={classes.wholepage}>
                 <header className={classes.mainh}>
                 <div className={classes.maindivlink}>
                     Trading journal
@@ -19,14 +20,9 @@ export class Tradingjournal extends Component {
                     </ul>
                 </nav>
             </header>
-            <main>
-            <div className={classes.Plus} ></div>
-               <Link className={classes.Addtrade} to="/addtrade">ADD TRADE</Link>
-                
-                </main>
-                
-                <div ><Route  path="/addtrade" component={Addtrade}></Route></div>
-               
+            <Route path="/history" component={History}></Route>
+            <Route path="/"  component={Dashboard}></Route>
+           
             </div>
         )
     }

@@ -1,0 +1,68 @@
+.calcontainer{
+    width: 43rem;
+    height: auto;
+    border: 1px solid black;
+ position: relative;
+ left: 120px;
+    box-sizing: content-box;
+    
+}
+.calheader{
+    height: auto;
+   
+    background-color: rgb(10, 47, 102);
+   color: white;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    
+}
+i{
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(231, 231, 247);
+
+}
+i:hover{
+    color: rgb(239, 233, 240);
+    
+}
+
+.year{
+    display: inline;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+.yearten{
+    background-color:white;
+   border: 0.5px solid black;
+   border-top: none;
+    width: 99%;
+    display: flex;
+   font-size: 30px;
+    flex-wrap: wrap;
+    padding: 4px;
+}
+.yearten div{
+    margin: 0.48rem;
+    width: calc(39rem/3);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.yearhover:hover{
+    background-color:  rgb(10, 47, 102);
+    color:white;
+}
+.prevnext{
+    cursor: pointer;
+    color: white;
+}
+span{
+   
+  
+    padding: 20px 20px;
+}

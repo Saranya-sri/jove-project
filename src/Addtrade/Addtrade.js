@@ -5,9 +5,11 @@ export class Addtrade extends Component {
     state={
         inputData:{
         company:"",
-        date:"",
-        time:"",
         type:"",
+        selldateAndTime:"",
+        buydateAndTime:"",
+        sellprice:"",
+        buyprice:"",
         comments:""}
     }
     onChangeHandler=(e)=>{
@@ -16,37 +18,92 @@ export class Addtrade extends Component {
         this.setState({inputData:{...this.state.inputData,[name]:value}})
     }
     onSubmitHandler=()=>{
-        alert("you have successfully added your new trading details")
+        alert("you have successfully added your new trading details");
+        alert(JSON.stringify(this.state.inputData))
     }
+    
     render() {
         return (
             <div className={classes.inputbox}>
+                 <p className={classes.tradehead}>TRADE DETAILS</p>
                 <form >
-                <label>COMPANY NAME:</label>
-                  <input type="text" 
-                   name="company" 
-                   value={this.state.inputData.company}
-                   placeholder="Company" 
-                   onChange={this.onChangeHandler}></input><br/>
-                 <label>DATE:</label>
-                  <input 
-                   name="date" 
-                   value={this.state.inputData.date}
-                   placeholder="dd/mm/yyyy" 
-                   onChange={this.onChangeHandler}></input><br/>
-                 <label>TIME:</label>
-                  <input 
-                   name="time" 
-                   value={this.state.inputData.time}
-                   placeholder="13:45" 
-                   onChange={this.onChangeHandler}></input><br/>
-                 <label>COMMENTS:</label>
+                <label>Company </label>
+                <input 
+                  type="text" 
+                  name="company" 
+                  value={this.state.inputData.company}
+                  placeholder="Company" 
+                  onChange={this.onChangeHandler}></input><br/>
+
+                <label for="Tradetype">Trade type </label>
+
+                 <select name="type" >
+                <option value={this.state.inputData.type}>Short</option>
+                <option value={this.state.inputData.type}>Long</option>
+  
+                 </select>
+               <br/>
+
+            <div className={classes.userinputwrp1}>
+             <br/>
+                 <input 
+              type="text"
+              name="sell date and time" 
+              value={this.state.inputData.selldateAndTime}
+              onChange={this.onChangeHandler}
+              className={classes.inputText} 
+           />
+        <span className={classes.floatinglabel1}>sell date and time</span>
+     </div>
+     <div className={classes.userinputwrp1} >
+     <br/>
+     <input name="buy date and time" type="text" 
+     onChange={this.onChangeHandler}
+    value={this.state.inputData.buydateAndTime}
+
+  onChange={this.onChangeHandler}
+    className={classes.inputText} 
+    ></input>
+  {/* <input 
+  name="buydate and time" 
+  value={this.state.inputData.buydateAndTime}
+  type="datetime-local"
+  onChange={this.onChangeHandler}
+/> */}
+  <span  className={classes.floatinglabel1} >Buy date and time</span>
+</div>
+
+
+<div className={classes.userinputwrp}>
+  <br/>
+  <input name="sellprice" 
+        value={this.state.inputData.sellprice}
+         
+        onChange={this.onChangeHandler}
+         className={classes.inputText} required/>
+  <span className={classes.floatinglabel}>Sell price Rs</span>
+</div>
+
+                
+
+<div className={classes.userinputwrp}>
+  <br/>
+  <input  name="buyprice" 
+          value={this.state.inputData.buyprice}
+         
+           onChange={this.onChangeHandler} className={classes.inputText} required/>
+  <span className={classes.floatinglabel}>Buy price Rs</span>
+</div>
+
+                <br/>
+               
+                 {/* <label>Comments</label><br/>
                   <textarea
                    type="text" 
                    name="comments" 
                    value={this.state.inputData.comments}
-                   placeholder="write your comments" 
-                   onChange={this.onChangeHandler}></textarea>
+                   placeholder="comments here" 
+                   onChange={this.onChangeHandler}></textarea><br/>  */}
         <button onClick={this.onSubmitHandler} >SUBMIT</button>
                 </form>
                 <Link className={classes.close} to="/"></Link>

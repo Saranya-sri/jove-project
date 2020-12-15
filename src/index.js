@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Appforcalendar from './Appforcalendar/Appforcalendar';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter><App /></BrowserRouter>
+    <BrowserRouter><Appforcalendar /></BrowserRouter>
     
   </React.StrictMode>,
   document.getElementById('root')

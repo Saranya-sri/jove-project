@@ -1,0 +1,92 @@
+.calcontainer{
+    width: 43rem;
+    height: auto;
+    border: 1px solid black;
+ position: relative;
+ left: 120px;
+    box-sizing: content-box;
+    
+}
+.calheader{
+    height: auto;
+   
+    background-color: rgb(10, 47, 102);
+   color: white;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    
+}
+i{
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(231, 231, 247);
+
+}
+i:hover{
+    color: rgb(239, 233, 240);
+    
+}
+.todaysdate{
+    background-color: rgb(87, 122, 115);
+    font-size: 16px;
+    border-bottom: 0.5px solid black;
+    font-weight: bold;
+    padding: 10px 0px 10px 200px;
+}
+.monthyear{
+    display: inline;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+.weekdays{
+    
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border:none;
+    justify-content: center;
+    padding: 10px;
+}
+
+.weekdays div{
+  
+    width: calc(40rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(15, 19, 15);
+    font-weight: bold;
+}
+.days{
+    background-color:white;
+   border: 0.5px solid black;
+   border-top: none;
+    width: 99%;
+    display: flex;
+   font-size: 30px;
+    flex-wrap: wrap;
+    padding: 4px;
+}
+.days div{
+    margin: 0.48rem;
+    width: calc(35rem/7);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dayhover:hover{
+    background-color:  rgb(10, 47, 102);
+    color:white;
+}
+.prevnext{
+    cursor: pointer;
+}
+a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
